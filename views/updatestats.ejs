@@ -11,7 +11,7 @@
       <label for="score">Fill in a score</label>
       <input id="score" type="text" name="score" />
       <label for="player">Select a player</label>
-      <select name="player" id="player">
+      <select name="player" id="players">
         <option value="Novak Djokovic">Novak Djokovic</option>
         <option value="Daniil Medvedev">Daniil Medvedev</option>
         <option value="Rafael Nadal">Rafael Nadal</option>
@@ -23,7 +23,9 @@
         <option value="Diego Schwartzman">Diego Schwartzman</option>
         <option value="Matteo Berrettini">Matteo Berrettini</option>
       </select>
-      <button type="submit">Update statistics</button>
+      <button class="submit" type="submit">Update statistics</button>
     </form>
+    <script src="/javascripts/primus.js"></script>
+    <script src="/javascripts/updatestats.js"></script>
   </body>
 </html>
