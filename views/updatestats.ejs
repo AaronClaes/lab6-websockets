@@ -5,26 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
   </head>
   <body>
-    <form action="/updatestats" method="post">
-      <label for="score">Fill in a score</label>
-      <input id="score" type="text" name="score" />
-      <label for="player">Select a player</label>
-      <select name="player" id="players">
-        <option value="Novak Djokovic">Novak Djokovic</option>
-        <option value="Daniil Medvedev">Daniil Medvedev</option>
-        <option value="Rafael Nadal">Rafael Nadal</option>
-        <option value="Dominic Thiem">Dominic Thiem</option>
-        <option value="Stefanos Tsitsipas">Stefanos Tsitsipas</option>
-        <option value="Roger Federer">Roger Federer</option>
-        <option value="Alexander Zverev">Alexander Zverev</option>
-        <option value="Andrey Rublev">Andrey Rublev</option>
-        <option value="Diego Schwartzman">Diego Schwartzman</option>
-        <option value="Matteo Berrettini">Matteo Berrettini</option>
-      </select>
-      <button class="submit" type="submit">Update statistics</button>
-    </form>
+    <div class="container">
+      <h1 class="title">Dashboard</h1>
+      <div class="card">
+        <form action="/updatestats" method="post">
+          <label for="score">Fill in a score</label>
+          <input class="input" id="score" type="text" name="score" />
+          <label for="player">Select a player</label>
+          <select class="input" name="player" id="players">
+            <option value="Novak Djokovic">Novak Djokovic</option>
+            <option value="Daniil Medvedev">Daniil Medvedev</option>
+            <option value="Rafael Nadal">Rafael Nadal</option>
+            <option value="Dominic Thiem">Dominic Thiem</option>
+            <option value="Stefanos Tsitsipas">Stefanos Tsitsipas</option>
+            <option value="Roger Federer">Roger Federer</option>
+            <option value="Alexander Zverev">Alexander Zverev</option>
+            <option value="Andrey Rublev">Andrey Rublev</option>
+            <option value="Diego Schwartzman">Diego Schwartzman</option>
+            <option value="Matteo Berrettini">Matteo Berrettini</option>
+          </select>
+          <button class="submit" type="submit">Update statistics</button>
+        </form>
+      </div>
+    </div>
     <script src="/javascripts/primus.js"></script>
     <script src="/javascripts/updatestats.js"></script>
   </body>
