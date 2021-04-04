@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/updatestats" method="post">
+      <label for="score">Fill in a score</label>
+      <input id="score" type="text" name="score" />
+      <label for="player">Select a player</label>
+      <select name="player" id="player">
+        <option value="Novak Djokovic">Novak Djokovic</option>
+        <option value="Daniil Medvedev">Daniil Medvedev</option>
+        <option value="Rafael Nadal">Rafael Nadal</option>
+        <option value="Dominic Thiem">Dominic Thiem</option>
+        <option value="Stefanos Tsitsipas">Stefanos Tsitsipas</option>
+        <option value="Roger Federer">Roger Federer</option>
+        <option value="Alexander Zverev">Alexander Zverev</option>
+        <option value="Andrey Rublev">Andrey Rublev</option>
+        <option value="Diego Schwartzman">Diego Schwartzman</option>
+        <option value="Matteo Berrettini">Matteo Berrettini</option>
+      </select>
+      <button type="submit">Update statistics</button>
+    </form>
+  </body>
+</html>
