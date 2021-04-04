@@ -14,10 +14,12 @@
         <th>Player</th>
         <th>Score</th>
       </tr>
+      <% data.forEach((player) => { %>
       <tr>
-        <td>Player-name</td>
-        <td>Player-score</td>
+        <td><%= player.player %></td>
+        <td><%= player.score %></td>
       </tr>
+      <% });%>
     </table>
     <script src="/javascripts/primus.js"></script>
     <script src="/javascripts/index.js"></script>

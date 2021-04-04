@@ -5,4 +5,8 @@ let primus = Primus.connect("/", {
     retries: 10, // Number: How many times we should try to reconnect.
   },
 });
-primus.on("data", (data) => {});
+primus.on("data", (data) => {
+  let player = data.player;
+  let score = data.score;
+  location.reload();
+});

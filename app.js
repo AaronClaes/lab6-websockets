@@ -1,3 +1,4 @@
+require("dotenv").config();
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
@@ -8,6 +9,23 @@ let indexRouter = require("./routes/index");
 let updatestatsRouter = require("./routes/updatestats");
 
 let app = express();
+
+const mongoose = require("mongoose");
+mongoose.connect(
+  `mongodb+srv://Aaron:${process.env.DB_PASS}@cluster0.yjlnc.mongodb.net/playersDB?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+mongoose.set("useFindAndModify", false);
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function () {
+  console.log("connected");
+  // we're connected!
+});
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
